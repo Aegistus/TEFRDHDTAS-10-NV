@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using UltEvents;
 
 public class StoryTeller : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class StoryTeller : MonoBehaviour
         public string name;
         public float delay;
         public UnityEvent OnEventTrigger;
+        public UltEvent UltEventTrigger;
     }
 
     private void Awake()
@@ -39,5 +41,6 @@ public class StoryTeller : MonoBehaviour
     {
         yield return new WaitForSeconds(storyEvent.delay);
         storyEvent.OnEventTrigger.Invoke();
+        storyEvent.UltEventTrigger.Invoke();
     }
 }
