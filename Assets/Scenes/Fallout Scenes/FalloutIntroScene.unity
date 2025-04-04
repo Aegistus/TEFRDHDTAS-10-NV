@@ -499,7 +499,7 @@ MonoBehaviour:
   spaceToContinue: 1
   characterName: {fileID: 1459644193}
   text: {fileID: 582695424}
-  dialogue: {fileID: 11400000, guid: 8cf2e918e7c6f264185e3a6e9dbba452, type: 2}
+  dialogue: {fileID: 11400000, guid: 31ca7b34b0b3b1046a27e23c3c5ad32e, type: 2}
   nextSceneName: DiveCinematic
 --- !u!1 &582695422
 GameObject:
