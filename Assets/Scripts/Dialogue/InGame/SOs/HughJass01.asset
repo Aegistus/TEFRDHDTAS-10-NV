@@ -37,7 +37,7 @@ MonoBehaviour:
       that for me?
     responses:
     - Yes
-    - No
+    - No (Yes, but later)
     - Sarcastic (Yes)
     - What?
   - characterDialogue: That's great! Here's my letter.
