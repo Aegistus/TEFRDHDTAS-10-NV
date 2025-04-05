@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum QuestEnum
 {
-    MainQuest, MilkDrinker
+    MainQuest, DesertCourier
 }
 
 public class QuestManager : MonoBehaviour
@@ -12,8 +12,8 @@ public class QuestManager : MonoBehaviour
     public static QuestManager Instance { get; private set; }
 
     public List<Quest> currentQuests;
-    [SerializeField] float questUpdateDelay = 4f;
 
+    [SerializeField] float questUpdateDelay = 4f;
     [SerializeField] float startQuestDelay = 3f;
     [SerializeField] Quest mainQuest;
     [SerializeField] List<Quest> sideQuests;
@@ -29,10 +29,12 @@ public class QuestManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
         AddQuestWithDelay(QuestEnum.MainQuest, 3);
     }
+
     public void AddQuest(Quest quest)
     {
         currentQuests.Add(quest);
@@ -61,6 +63,7 @@ public class QuestManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         AddQuest(questEnum);
     }
+
     public void UpdateQuestObjective(QuestEnum questEnum, int newObjectiveIndex)
     {
         Quest quest = currentQuests.Find(q => q.questEnum == questEnum);

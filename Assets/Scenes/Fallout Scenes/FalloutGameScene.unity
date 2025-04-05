@@ -5410,6 +5410,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3133859465639381679, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -23.622314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133859465639381679, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11.012878
+      objectReference: {fileID: 0}
     - target: {fileID: 3334305717978330363, guid: a629bd29f99a96346a485058051afc77, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6592,6 +6600,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372464677636963903, guid: a629bd29f99a96346a485058051afc77, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372464677636963903, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8372464677636963903, guid: a629bd29f99a96346a485058051afc77, type: 3}
@@ -9256,72 +9268,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7457513233632829052, guid: 4e261197a4d23b1479ac6df92e67d33f, type: 3}
   m_PrefabInstance: {fileID: 269850244}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &273695907
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8057061239797902401}
-    m_Modifications:
-    - target: {fileID: 1104850273578950, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_Name
-      value: SM_Icon_Letter_Exclamation_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.509
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23937126155845040, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f685a57b9da560a448bb95374a652f90, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
---- !u!4 &273695908 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4740029122835090, guid: 2fb9237466bb67a4aba3a1257a0190fb, type: 3}
-  m_PrefabInstance: {fileID: 273695907}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &275263046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10571,11 +10517,6 @@ PrefabInstance:
 --- !u!4 &308153895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2052740226243187762, guid: 6deda9fd5d308954bafadbecba99315a, type: 3}
-  m_PrefabInstance: {fileID: 308153894}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &308153896 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2052740226243187761, guid: 6deda9fd5d308954bafadbecba99315a, type: 3}
   m_PrefabInstance: {fileID: 308153894}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &308451537
@@ -18337,87 +18278,16 @@ MonoBehaviour:
   questUpdateDelay: 3
   startQuestDelay: 3
   mainQuest:
-    title: I Am In Your (Milk) Debt
-    description: Find out why a cow just fell out of the sky and exploded.
+    title: Milk Never Changes
+    description: Find out what just happened.
     objectives:
-    - description: Talk to Hugh Jass
+    - description: Talk to the wrinkly stranger
       location: {fileID: 8057061239797902401}
       offset: {x: 0, y: 2, z: 0}
       OnStart:
         _PersistentCalls: []
       OnFinish:
-        _PersistentCalls:
-        - _Target: {fileID: 1649799489}
-          _MemberName: SetActive
-          _PersistentArguments:
-          - _Type: 1
-            _Int: 1
-            _String: 
-            _X: 0
-            _Y: 0
-            _Z: 0
-            _W: 0
-            _Object: {fileID: 0}
-    - description: Find the dragon cow's lair
-      location: {fileID: 1012680663}
-      offset: {x: 0, y: 2, z: 0}
-      OnStart:
         _PersistentCalls: []
-      OnFinish:
-        _PersistentCalls: []
-    - description: Kill the dragon cow
-      location: {fileID: 5854256208222474326}
-      offset: {x: 0, y: 2, z: 0}
-      OnStart:
-        _PersistentCalls:
-        - _Target: {fileID: 1009489670}
-          _MemberName: Play
-          _PersistentArguments: []
-        - _Target: {fileID: 5854256208222474327}
-          _MemberName: SetActive
-          _PersistentArguments:
-          - _Type: 1
-            _Int: 1
-            _String: 
-            _X: 0
-            _Y: 0
-            _Z: 0
-            _W: 0
-            _Object: {fileID: 0}
-      OnFinish:
-        _PersistentCalls:
-        - _Target: {fileID: 1009489670}
-          _MemberName: Stop
-          _PersistentArguments: []
-    - description: Milk the cow
-      location: {fileID: 308153895}
-      offset: {x: 0, y: 4, z: 0}
-      OnStart:
-        _PersistentCalls:
-        - _Target: {fileID: 308153896}
-          _MemberName: SetActive
-          _PersistentArguments:
-          - _Type: 1
-            _Int: 1
-            _String: 
-            _X: 0
-            _Y: 0
-            _Z: 0
-            _W: 0
-            _Object: {fileID: 0}
-      OnFinish:
-        _PersistentCalls:
-        - _Target: {fileID: 970763186}
-          _MemberName: Play
-          _PersistentArguments:
-          - _Type: 1
-            _Int: 1
-            _String: 
-            _X: 0
-            _Y: 0
-            _Z: 0
-            _W: 0
-            _Object: {fileID: 0}
     questEnum: 0
     OnQuestComplete:
       _PersistentCalls:
@@ -18463,30 +18333,11 @@ MonoBehaviour:
         _PersistentCalls: []
     unlockedObjectives: []
   sideQuests:
-  - title: Milk Drinker
-    description: After killing the dragon cow, you felt a strange, magical feeling.
-      Talk to Archmage Richard Head to learn what it was.
+  - title: Desert Courier
+    description: Deliver Hugh Jass' letter to his cousin, Stu Pideas.
     objectives:
-    - description: Talk to Archmage Richard Head
-      location: {fileID: 825538616}
-      offset: {x: 0, y: 2, z: 0}
-      OnStart:
-        _PersistentCalls: []
-      OnFinish:
-        _PersistentCalls:
-        - _Target: {fileID: 2075813544}
-          _MemberName: set_ShoutsUnlocked
-          _PersistentArguments:
-          - _Type: 1
-            _Int: 1
-            _String: 
-            _X: 0
-            _Y: 0
-            _Z: 0
-            _W: 0
-            _Object: {fileID: 0}
-    - description: Use your shout on the boxes
-      location: {fileID: 339823784}
+    - description: Find and talk to Stu Pideas
+      location: {fileID: 0}
       offset: {x: 0, y: 0, z: 0}
       OnStart:
         _PersistentCalls: []
@@ -18495,7 +18346,7 @@ MonoBehaviour:
     questEnum: 1
     OnQuestComplete:
       _PersistentCalls: []
-    currentObjectiveInd: -1
+    currentObjectiveInd: 0
     currentObjective:
       description: 
       location: {fileID: 0}
@@ -30670,11 +30521,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4169cfb5a89abfd4086b2fdc9d0d880f, type: 3}
---- !u!198 &970763186 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2251512540798511486, guid: 4169cfb5a89abfd4086b2fdc9d0d880f, type: 3}
-  m_PrefabInstance: {fileID: 970763185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &972106476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2487386582009474498, guid: 1e6927ff9fdd9974f9a681ec596d4537, type: 3}
@@ -32482,14 +32328,14 @@ RectTransform:
   m_GameObject: {fileID: 1045593889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.63938, y: 0.63938, z: 0.63938}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 751418641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -521}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1045593891
@@ -32512,7 +32358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 81f6ecf044c7d2146b2e6f2a161bbd1d, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7b03355d041940245bd4c0e25747e195, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -62280,11 +62126,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2421089286696329246, guid: 293836fd436f6f8408d673ae9881c4dc, type: 3}
   m_PrefabInstance: {fileID: 8005478199732133264}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5854256208222474327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7813332160576105014, guid: 293836fd436f6f8408d673ae9881c4dc, type: 3}
-  m_PrefabInstance: {fileID: 8005478199732133264}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7457513233267771692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62527,7 +62368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 681571233708863073, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9238795
+      value: 0.98611885
       objectReference: {fileID: 0}
     - target: {fileID: 681571233708863073, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -62535,7 +62376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 681571233708863073, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3826837
+      value: 0.16604108
       objectReference: {fileID: 0}
     - target: {fileID: 681571233708863073, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -62547,7 +62388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 681571233708863073, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
+      value: 19.115
       objectReference: {fileID: 0}
     - target: {fileID: 681571233708863073, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -62559,7 +62400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete._PersistentCalls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete.m_PersistentCalls.m_Calls.Array.size
@@ -62570,8 +62411,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 539598791}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
+      propertyPath: OnDialogueComplete._PersistentCalls.Array.data[1]._Target
+      value: 
+      objectReference: {fileID: 539598791}
+    - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete._PersistentCalls.Array.data[0]._MemberName
-      value: UpdateQuestObjective
+      value: FinishQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
+      propertyPath: OnDialogueComplete._PersistentCalls.Array.data[1]._MemberName
+      value: AddQuest
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -62583,10 +62432,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete._PersistentCalls.Array.data[0]._PersistentArguments.Array.size
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
+      propertyPath: OnDialogueComplete._PersistentCalls.Array.data[1]._PersistentArguments.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete._PersistentCalls.Array.data[0]._PersistentArguments.Array.data[1]._Int
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
+      propertyPath: OnDialogueComplete._PersistentCalls.Array.data[1]._PersistentArguments.Array.data[0]._Int
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
@@ -62598,6 +62455,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
+      propertyPath: OnDialogueComplete._PersistentCalls.Array.data[1]._PersistentArguments.Array.data[0]._Type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete._PersistentCalls.Array.data[0]._PersistentArguments.Array.data[0]._Object
       value: 
       objectReference: {fileID: 0}
@@ -62605,12 +62466,13 @@ PrefabInstance:
       propertyPath: OnDialogueComplete._PersistentCalls.Array.data[0]._PersistentArguments.Array.data[0]._String
       value: QuestEnum, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
+    - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
+      propertyPath: OnDialogueComplete._PersistentCalls.Array.data[1]._PersistentArguments.Array.data[0]._String
+      value: QuestEnum, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 681571233708863073, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 273695908}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5483783486632254377, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       insertIndex: -1
