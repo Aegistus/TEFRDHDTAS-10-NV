@@ -4,14 +4,15 @@ using UnityEngine;
 
 public enum QuestEnum
 {
-    MainQuest, DesertCourier
+    MainQuest, DesertCourier, FetchQuest
 }
 
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance { get; private set; }
 
-    public List<Quest> currentQuests;
+    public List<Quest> activeQuests;
+    public Quest currentQuest;
 
     [SerializeField] float questUpdateDelay = 4f;
     [SerializeField] float startQuestDelay = 3f;
@@ -37,7 +38,8 @@ public class QuestManager : MonoBehaviour
 
     public void AddQuest(Quest quest)
     {
-        currentQuests.Add(quest);
+        activeQuests.Add(quest);
+        currentQuest = quest;
         QuestPopup.Instance.ShowQuestStartPopup(quest.title);
         quest.currentObjective = quest.objectives[0];
         UpdateQuestObjective(quest.questEnum, 0);
@@ -46,10 +48,7 @@ public class QuestManager : MonoBehaviour
     public void AddQuest(QuestEnum questEnum)
     {
         Quest quest = sideQuests.Find(q => q.questEnum == questEnum);
-        if (quest == null)
-        {
-            quest = mainQuest;
-        }
+        quest ??= mainQuest;
         AddQuest(quest);
     }
 
@@ -66,7 +65,7 @@ public class QuestManager : MonoBehaviour
 
     public void UpdateQuestObjective(QuestEnum questEnum, int newObjectiveIndex)
     {
-        Quest quest = currentQuests.Find(q => q.questEnum == questEnum);
+        Quest quest = activeQuests.Find(q => q.questEnum == questEnum);
         if (quest == null || quest.currentObjectiveInd >= newObjectiveIndex)
         {
             return;
@@ -76,15 +75,26 @@ public class QuestManager : MonoBehaviour
         StartCoroutine(UpdateDelay(quest, newObjectiveIndex));
     }
 
+    public void GoToNextQuestObjective(QuestEnum questEnum)
+    {
+        Quest quest = activeQuests.Find(q => q.questEnum == questEnum);
+        if (quest == null)
+        {
+            return;
+        }
+        int newIndex = quest.currentObjectiveInd + 1;
+        UpdateQuestObjective(questEnum, newIndex); 
+    }
+
     public void FinishQuest(QuestEnum questEnum)
     {
-        Quest quest = currentQuests.Find(q => q.questEnum == questEnum);
+        Quest quest = activeQuests.Find(q => q.questEnum == questEnum);
         quest.currentObjective?.OnFinish?.Invoke();
         if (quest == null)
         {
             return;
         }
-        currentQuests.Remove(quest);
+        activeQuests.Remove(quest);
         QuestPopup.Instance.ShowQuestEndPopup(quest.title);
         quest.OnQuestComplete?.Invoke();
     }
@@ -104,11 +114,15 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    //IEnumerator StartMainQuest()
-    //{
-    //    yield return new WaitForSeconds(startQuestDelay);
-    //    AddQuest(mainQuest);
-    //    // testing
-    //    //AddQuest(QuestEnum.MilkDrinker);
-    //}
+    public void ChangeCurrentFocusedQuest()
+    {
+        int index = activeQuests.FindIndex(q => q.questEnum == currentQuest.questEnum);
+        index = (index + 1) % activeQuests.Count;
+        currentQuest = activeQuests[index];
+        var questMarker = GameObject.FindWithTag("Quest Marker");
+        if (questMarker != null)
+        {
+            questMarker.transform.position = currentQuest.currentObjective.location.position + currentQuest.currentObjective.offset;
+        }
+    }
 }

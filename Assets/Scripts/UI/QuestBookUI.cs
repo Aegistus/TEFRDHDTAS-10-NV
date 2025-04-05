@@ -53,21 +53,21 @@ public class QuestBookUI : MonoBehaviour
 
     public void UpdateBook()
     {
-        if (questManager.currentQuests.Count == 0)
+        if (questManager.activeQuests.Count == 0)
         {
             return;
         }
-        questTitle.text = questManager.currentQuests[0].title;
-        currentQuestTitle.text = questManager.currentQuests[0].title;
-        currentQuestDescription.text = questManager.currentQuests[0].description;
+        questTitle.text = questManager.activeQuests[0].title;
+        currentQuestTitle.text = questManager.activeQuests[0].title;
+        currentQuestDescription.text = questManager.activeQuests[0].description;
         for (int i = 0; i < questObjectiveParent.childCount; i++)
         {
             Destroy(questObjectiveParent.GetChild(i).gameObject);
         }
-        for (int i = 0; i < questManager.currentQuests[0].unlockedObjectives.Count; i++)
+        for (int i = 0; i < questManager.activeQuests[0].unlockedObjectives.Count; i++)
         {
             var objectiveUI = Instantiate(questObjectivePrefab, questObjectiveParent);
-            objectiveUI.GetComponent<TMP_Text>().text = questManager.currentQuests[0].unlockedObjectives[i].description;
+            objectiveUI.GetComponent<TMP_Text>().text = questManager.activeQuests[0].unlockedObjectives[i].description;
         }
     }
 }
