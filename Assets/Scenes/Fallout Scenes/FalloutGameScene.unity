@@ -4870,6 +4870,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 568066092396051141, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 568066092396051141, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 568066092396051141, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 568066092396051141, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 568066092396051141, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 588521344874192839, guid: a629bd29f99a96346a485058051afc77, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6803,6 +6823,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9074402135328271510, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119742794475662504, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119742794475662504, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119742794475662504, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119742794475662504, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119742794475662504, guid: a629bd29f99a96346a485058051afc77, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -18307,7 +18347,7 @@ MonoBehaviour:
         - _Type: 5
           _Int: 0
           _String: 
-          _X: 6
+          _X: 4
           _Y: 0
           _Z: 0
           _W: 0
@@ -18346,8 +18386,19 @@ MonoBehaviour:
         _PersistentCalls: []
     questEnum: 1
     OnQuestComplete:
-      _PersistentCalls: []
-    currentObjectiveInd: 0
+      _PersistentCalls:
+      - _Target: {fileID: 970763186}
+        _MemberName: AddBottlecaps
+        _PersistentArguments:
+        - _Type: 3
+          _Int: 500
+          _String: 
+          _X: 0
+          _Y: 0
+          _Z: 0
+          _W: 0
+          _Object: {fileID: 0}
+    currentObjectiveInd: -1
     currentObjective:
       description: 
       location: {fileID: 0}
@@ -30522,6 +30573,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4169cfb5a89abfd4086b2fdc9d0d880f, type: 3}
+--- !u!114 &970763186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503955854087624510, guid: 4169cfb5a89abfd4086b2fdc9d0d880f, type: 3}
+  m_PrefabInstance: {fileID: 970763185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f91372c2bbd8644a2273958fa5e216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &972106476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2487386582009474498, guid: 1e6927ff9fdd9974f9a681ec596d4537, type: 3}
@@ -40177,7 +40239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724280049523874195, guid: a94cf6bf8575b5f46918558d597ae6c2, type: 3}
       propertyPath: selectedPlayerModel
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62595,7 +62657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete._PersistentCalls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4192876634386551380, guid: 8e0cd23fa186c4445b3b4595059cd0d5, type: 3}
       propertyPath: OnDialogueComplete.m_PersistentCalls.m_Calls.Array.size

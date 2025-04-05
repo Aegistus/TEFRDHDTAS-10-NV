@@ -22,7 +22,6 @@ MonoBehaviour:
       Milkdiver?? I thought you were dead!
     responses:
     - Do we know each other?
-    - Immortal? We can test that hypothesis.
   - characterDialogue: It's me John! It's Hugh Jass, remember?
     responses:
     - What happened to your skin? You look hideous!
@@ -31,6 +30,7 @@ MonoBehaviour:
       for a person's skin. While I may look ghoulish though, I'm basically immortal!
     responses:
     - Well, whatever works right?
+    - Immortal? Well we can test that hypothesis.
   - characterDialogue: Say, you're really into doing random, dangerous work for people
       for very little personal gain, right? I've got a letter that I need to be delivered
       to my cousin Stu. He's on the other side of the valley. Think you could do

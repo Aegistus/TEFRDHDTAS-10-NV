@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 7979810908788673010}
   - component: {fileID: 1254412174412934732}
   - component: {fileID: 2075813529}
+  - component: {fileID: 1503955854087624510}
   - component: {fileID: 8602284904403906772}
   - component: {fileID: 2542434610876964793}
   - component: {fileID: 923826976730623430}
@@ -721,6 +722,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a3aef36390d5ff448fd516540f2f909, type: 2}
   - {fileID: 11400000, guid: ea456a20f12e2a7459142315178f211c, type: 2}
   currentInput: 
+--- !u!114 &1503955854087624510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542434610876964789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f91372c2bbd8644a2273958fa5e216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottlecaps: 0
+  items: []
 --- !u!114 &8602284904403906772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,6 +2344,10 @@ PrefabInstance:
     - target: {fileID: 1590287472412400, guid: 02f7f04a484c69143a794e60d5a935b1, type: 3}
       propertyPath: m_Name
       value: FX_Snow_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590287472412400, guid: 02f7f04a484c69143a794e60d5a935b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4147185747737992, guid: 02f7f04a484c69143a794e60d5a935b1, type: 3}
       propertyPath: m_LocalPosition.x
