@@ -500,7 +500,7 @@ MonoBehaviour:
   characterName: {fileID: 1459644193}
   text: {fileID: 582695424}
   dialogue: {fileID: 11400000, guid: 31ca7b34b0b3b1046a27e23c3c5ad32e, type: 2}
-  nextSceneName: DiveCinematic
+  nextSceneName: FalloutIntroScene
 --- !u!1 &582695422
 GameObject:
   m_ObjectHideFlags: 0
