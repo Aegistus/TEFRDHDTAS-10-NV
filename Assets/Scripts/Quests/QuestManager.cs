@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum QuestEnum
 {
-    MainQuest, DesertCourier, FetchQuest
+    MainQuest, DesertCourier, FetchQuest, KilotonKatastrophe
 }
 
 public class QuestManager : MonoBehaviour
