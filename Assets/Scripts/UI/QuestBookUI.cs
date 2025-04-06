@@ -5,7 +5,7 @@ using TMPro;
 
 public class QuestBookUI : MonoBehaviour
 {
-    [SerializeField] TMP_Text questTitle;
+    [SerializeField] List<TMP_Text> questTitles;
     [SerializeField] TMP_Text currentQuestTitle;
     [SerializeField] TMP_Text currentQuestDescription;
     [SerializeField] Transform questObjectiveParent;
@@ -19,6 +19,12 @@ public class QuestBookUI : MonoBehaviour
     {
         questManager = QuestManager.Instance;
         CloseBook();
+        questManager.OnActiveQuestChanged += QuestManager_OnActiveQuestChanged;
+    }
+
+    private void QuestManager_OnActiveQuestChanged(Quest obj)
+    {
+        UpdateBook();
     }
 
     private void Update()
@@ -33,6 +39,10 @@ public class QuestBookUI : MonoBehaviour
             {
                 OpenBook();
             }
+        }
+        if (QuestBookOpen && Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            questManager.ChangeCurrentFocusedQuest();
         }
     }
 
@@ -57,17 +67,27 @@ public class QuestBookUI : MonoBehaviour
         {
             return;
         }
-        questTitle.text = questManager.activeQuests[0].title;
-        currentQuestTitle.text = questManager.activeQuests[0].title;
-        currentQuestDescription.text = questManager.activeQuests[0].description;
+        for (int i = 0; i < questTitles.Count; i++)
+        {
+            if (i < questManager.activeQuests.Count)
+            {
+                questTitles[i].text = questManager.activeQuests[i].title;
+            }
+            else
+            {
+                questTitles[i].text = string.Empty;
+            }
+        }
+        currentQuestTitle.text = questManager.currentQuest.title;
+        currentQuestDescription.text = questManager.currentQuest.description;
         for (int i = 0; i < questObjectiveParent.childCount; i++)
         {
             Destroy(questObjectiveParent.GetChild(i).gameObject);
         }
-        for (int i = 0; i < questManager.activeQuests[0].unlockedObjectives.Count; i++)
+        for (int i = 0; i < questManager.currentQuest.unlockedObjectives.Count; i++)
         {
             var objectiveUI = Instantiate(questObjectivePrefab, questObjectiveParent);
-            objectiveUI.GetComponent<TMP_Text>().text = questManager.activeQuests[0].unlockedObjectives[i].description;
+            objectiveUI.GetComponent<TMP_Text>().text = questManager.currentQuest.unlockedObjectives[i].description;
         }
     }
 }

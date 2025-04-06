@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public enum QuestEnum
 
 public class QuestManager : MonoBehaviour
 {
+    public event Action<Quest> OnActiveQuestChanged;
+
     public static QuestManager Instance { get; private set; }
 
     public List<Quest> activeQuests;
@@ -97,11 +100,19 @@ public class QuestManager : MonoBehaviour
         activeQuests.Remove(quest);
         QuestPopup.Instance.ShowQuestEndPopup(quest.title);
         quest.OnQuestComplete?.Invoke();
+        if (quest == currentQuest)
+        {
+            ChangeCurrentFocusedQuest();
+        }
     }
 
     IEnumerator UpdateDelay(Quest quest, int objectiveIndex)
     {
         yield return new WaitForSeconds(questUpdateDelay);
+        if (currentQuest != quest)
+        {
+            ChangeCurrentFocusedQuest(quest);
+        }
         quest.unlockedObjectives.Add(quest.objectives[objectiveIndex]);
         quest.currentObjective = quest.objectives[objectiveIndex];
         quest.currentObjective.OnStart.Invoke();
@@ -116,6 +127,7 @@ public class QuestManager : MonoBehaviour
 
     public void ChangeCurrentFocusedQuest()
     {
+        if (activeQuests.Count == 0) { return; }
         int index = activeQuests.FindIndex(q => q.questEnum == currentQuest.questEnum);
         index = (index + 1) % activeQuests.Count;
         currentQuest = activeQuests[index];
@@ -124,5 +136,17 @@ public class QuestManager : MonoBehaviour
         {
             questMarker.transform.position = currentQuest.currentObjective.location.position + currentQuest.currentObjective.offset;
         }
+        OnActiveQuestChanged?.Invoke(currentQuest);
+    }
+
+    public void ChangeCurrentFocusedQuest(Quest quest)
+    {
+        currentQuest = quest;
+        var questMarker = GameObject.FindWithTag("Quest Marker");
+        if (questMarker != null)
+        {
+            questMarker.transform.position = currentQuest.currentObjective.location.position + currentQuest.currentObjective.offset;
+        }
+        OnActiveQuestChanged?.Invoke(currentQuest);
     }
 }

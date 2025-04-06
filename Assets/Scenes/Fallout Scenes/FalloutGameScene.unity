@@ -5192,6 +5192,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1150831463720654344, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150831463720654344, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150831463720654344, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150831463720654344, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150831463720654344, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1174517669715856265, guid: a629bd29f99a96346a485058051afc77, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5389,6 +5409,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2047917928635264300, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057760277581130780, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057760277581130780, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057760277581130780, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057760277581130780, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057760277581130780, guid: a629bd29f99a96346a485058051afc77, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -6533,6 +6573,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7346884614969649466, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459050842541472918, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459050842541472918, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459050842541472918, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459050842541472918, guid: a629bd29f99a96346a485058051afc77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459050842541472918, guid: a629bd29f99a96346a485058051afc77, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -19800,8 +19860,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37acf5c9784edd4bbabc2442c210b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentQuests: []
-  questUpdateDelay: 3
+  activeQuests: []
+  currentQuest:
+    title: 
+    description: 
+    objectives: []
+    questEnum: 0
+    OnQuestComplete:
+      _PersistentCalls: []
+    currentObjectiveInd: -1
+    currentObjective:
+      description: 
+      location: {fileID: 0}
+      offset: {x: 0, y: 0, z: 0}
+      OnStart:
+        _PersistentCalls: []
+      OnFinish:
+        _PersistentCalls: []
+    unlockedObjectives: []
+  questUpdateDelay: 1
   startQuestDelay: 3
   mainQuest:
     title: Milk Never Changes
