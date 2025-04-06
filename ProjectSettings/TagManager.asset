@@ -18,8 +18,8 @@ TagManager:
   - Interactable
   - Strategem Ball
   - Physics Prop
-  - 
-  - 
+  - HideOnMap
+  - ShowOnMap
   - 
   - 
   - 

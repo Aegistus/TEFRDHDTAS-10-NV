@@ -14,12 +14,14 @@ public class QuestBookUI : MonoBehaviour
     public bool QuestBookOpen { get; private set; }
 
     QuestManager questManager;
+    MapUI map;
 
     private void Start()
     {
         questManager = QuestManager.Instance;
         CloseBook();
         questManager.OnActiveQuestChanged += QuestManager_OnActiveQuestChanged;
+        map = FindAnyObjectByType<MapUI>();
     }
 
     private void QuestManager_OnActiveQuestChanged(Quest obj)
@@ -29,6 +31,10 @@ public class QuestBookUI : MonoBehaviour
 
     private void Update()
     {
+        if (map.MapOpen)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.J))
         {
             if (QuestBookOpen)
