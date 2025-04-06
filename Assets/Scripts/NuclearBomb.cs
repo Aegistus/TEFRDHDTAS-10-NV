@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class NuclearBomb : MonoBehaviour
 {
+    [SerializeField] bool armOnAwake = false;
     [SerializeField] float delay = 0f;
 
     [SerializeField] ParticleSystem particles;
     [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject[] deactivateAfterExplosion;
+
+    private void Start()
+    {
+        if (armOnAwake)
+        {
+            Explode();
+        }
+    }
 
     public void Explode()
     {
